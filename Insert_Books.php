@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -111,7 +112,7 @@ input[type=submit]:hover {
 <body style="background-image: url('library-books-laptop-table-wallpaper.jpg'); background-size: cover; background-repeat: no-repeat;">
 
 <h1 style="background-color: #4CAF50;" ><center>Insert Books</center></h1>
-
+<a href="libraryhome.php">Back</a>
 <!-- <table><tr><th> -->
     <center>
 <div class="container" align="left">

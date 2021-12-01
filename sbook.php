@@ -19,7 +19,7 @@ cursor: pointer;
 }
     </style>
        <body style="font-family: 'Times New Roman', Times, serif; border-radius: 1ch; color:rgb(203, 203, 212); background-image: url('photo-1536411396596-afed9fa3c1b2.jpg'); background-size: cover; background-repeat: no-repeat;">
-        <h1 style="text-align: center; background-color: green;"><a href="libraryhome.html" class="button">Library Book Management</a></h1>
+        <h1 style="text-align: center; background-color: green;"><a href="libraryhome.php" class="button">Library Book Management</a></h1>
         <table border="1" style="color:black;background-color:white;" align="center">
   <tr>
     <td>ID</td>
@@ -56,7 +56,7 @@ $con = mysqli_connect('localhost', 'root', '','library');
         $sql = "SELECT * FROM `books` WHERE `Dept` = '$dept' AND `Wname`='$Wname'";
     }
     else{
-        $sql = "SELECT * FROM `books` WHERE `Dept` = '$dept' AND `Bname`='$bname' AND `Wname`='$Wname'";
+        $sql = "SELECT * FROM `books` WHERE `Dept` = '$dept' AND `Bname`='$bname' AND `Wname`='$wname'";
     }
 // database insert SQL code
 // $sql = "INSERT INTO `cost` (`Cdate`,`Reason`,`Price`) VALUES('$date', '$reason', '$price')";
