@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!empty($_SESSION['User']))
+{
+  header("location:libraryhome.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
