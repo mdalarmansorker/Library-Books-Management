@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +19,22 @@ display: inline-block;
 font-size: 30px;
 margin: 4px 4px;
 cursor: pointer;
+}
+  .button {
+    border: 4px solid #4CAF50; /* Green */
+    }
+  .button1 {
+    background-color: black;
+    padding: 16px 16px;
+    }
+.button2{
+    background-color:#45a049;
+  color: white;
+  padding: 10.5px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
 }
 input[type=text], select, textarea {
   width: 100%;
@@ -93,15 +110,17 @@ input[type=submit]:hover {
 </style>
 </head>
 <body style="background-image: url('library-books-laptop-table-wallpaper.jpg'); background-size: cover; background-repeat: no-repeat;">
-  <h1 style="background-color:green"><center><img src="InstituteLogoColorFull.png" height="50px" weight="50px"><center></h1>
+<h1 style="background-color:green"><center><img src="InstituteLogoColorFull.png" height="50px" weight="50px"><center></h1>
     <h1 style="text-align: center; background-color: green;">Library Book Management</h1>
-    <h1 style="text-align: center; background-color: green;"><a href="libraryhome.php" class="button">Search Books</a></h1>
-
+<h1 style="background-color: #4CAF50;" ><center>Insert Books</center></h1>
+<a href="libraryhome.php">Back</a>
 <!-- <table><tr><th> -->
     <center>
 <div class="container" align="left">
-  <form action="sbook.php" method="post">
-
+  <form action="ibook.php" method="post">
+<?php if (isset($_GET['error'])) { ?>
+    <p class="error"><?php echo $_GET['error']; ?></p>
+<?php } ?>
             <div class="row">
                 <div class="col-25">
                   <label>Department's Name</label>
@@ -119,7 +138,14 @@ input[type=submit]:hover {
                     </select>
                   </div>
               </div>
-  
+  <div class="row">
+    <div class="col-25">
+      <label>Date</label>
+    </div>
+    <div class="col-75">
+      <input type="text" name="date" placeholder="YYYY-MM-DD">
+    </div>
+  </div>
   <div class="row">
     <div class="col-25">
       <label>Book's Name</label>
@@ -136,7 +162,30 @@ input[type=submit]:hover {
       <input type="text" name="wname" placeholder="Name of the writer">
     </div>
   </div>
-  
+  <div class="row">
+    <div class="col-25">
+      <label>Amount</label>
+    </div>
+    <div class="col-75">
+      <input type="text" name="amount" placeholder="Amount">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label>Edition</label>
+    </div>
+    <div class="col-75">
+      <input type="text" name="edition" placeholder="Book's Edition">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label>Price Per Book</label>
+    </div>
+    <div class="col-75">
+      <input type="text" name="price" placeholder="Price per book">
+    </div>
+  </div>
   
     <div class='row'>
         <input type="submit" value="Submit" align="center">
