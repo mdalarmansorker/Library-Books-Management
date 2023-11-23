@@ -39,8 +39,6 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`Name`, `Email`, `Password`, `Designation`) VALUES
-('Monisha Bakshi', 'cse.200101055@gmail.com', 'monisha', 'N/A'),
-('Maisha Maliha Jahan', 'cse.200101060@gmail.com', 'ruku', 'Library Assistant'),
 ('MD Al Arman Sorker', 'mdalarmansorker@gmail.com', 'arman', 'N/A');
 
 -- --------------------------------------------------------
